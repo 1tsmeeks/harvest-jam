@@ -16,12 +16,11 @@ func FlipCard(flipType: int):
 		1:
 			if !flipState:
 				animationPlayer.play("flip")	
-				animationPlayer.play_section("flip",0,0.1333)
+				animationPlayer.play_section("flip",0,0.3)
 				flipState = true
 				pass
 		-1:
 			if flipState:
-				animationPlayer.play_section("flip",0.1333,0.3)
+				animationPlayer.play_section("flip",0.3,0.6)
 				flipState = false
 	
-

@@ -30,4 +30,3 @@ func calulateEarnings() -> int:
 			newEarnings += card.value
 		totalEarnings += newEarnings * multiplier
 	return totalEarnings
-
