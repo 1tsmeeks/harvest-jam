@@ -1,7 +1,9 @@
 extends Node2D
 
+var currentBalance: int
+var maxBalance: int
 var rolls: int
-
+var blind: int
 var lockedrowcolumn: Array[Array]
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -30,15 +30,16 @@ color = Color(0, 0, 0, 1)
 [node name="roundmanager" type="Node" parent="." unique_id=5284092]
 
 [node name="Board" type="Node2D" parent="." unique_id=1944912983]
-position = Vector2(224, 113)
+position = Vector2(217, 56)
 script = ExtResource("2_c651c")
+metadata/_edit_group_ = true
 
 [node name="boardcells" type="Sprite2D" parent="Board" unique_id=1896345767]
 texture_repeat = 2
 texture = ExtResource("1_53q0u")
 centered = false
 region_enabled = true
-region_rect = Rect2(0, 0, 64, 96)
+region_rect = Rect2(0, 0, 192, 240)
 
 [node name="border" type="Line2D" parent="Board" unique_id=1362125064]
 points = PackedVector2Array(64, 0)
