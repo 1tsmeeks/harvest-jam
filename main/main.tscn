@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bbj0qrxk62lut"]
+
+[ext_resource type="Texture2D" uid="uid://c0wu5eikcsbc4" path="res://cardslots/CardSlots.png" id="1_53q0u"]
+[ext_resource type="Script" uid="uid://j8gxouww2jus" path="res://main/main.gd" id="1_xwkvk"]
+[ext_resource type="Script" uid="uid://b1xmw6e3nw0cy" path="res://main/board.gd" id="2_c651c"]
+[ext_resource type="Script" uid="uid://by70qxpqmuyg" path="res://main/ui.gd" id="3_c651c"]
+
+[node name="main" type="Node2D" unique_id=1581299732]
+script = ExtResource("1_xwkvk")
+
+[node name="background" type="Control" parent="." unique_id=1859438189]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="background" unique_id=1316801620]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="roundmanager" type="Node" parent="." unique_id=5284092]
+
+[node name="Board" type="Node2D" parent="." unique_id=1944912983]
+position = Vector2(224, 113)
+script = ExtResource("2_c651c")
+
+[node name="boardcells" type="Sprite2D" parent="Board" unique_id=1896345767]
+texture_repeat = 2
+texture = ExtResource("1_53q0u")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 96)
+
+[node name="border" type="Line2D" parent="Board" unique_id=1362125064]
+points = PackedVector2Array(64, 0)
+closed = true
+width = 1.0
+
+[node name="cardcontainer" type="Node2D" parent="Board" unique_id=694402371]
+
+[node name="ui" type="Control" parent="." unique_id=722787119]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_c651c")
+
+[node name="slotmachinething" type="Control" parent="ui" unique_id=1663450607]
+layout_mode = 1
+anchor_left = 14.025
+anchor_top = 1.35
+anchor_right = 14.025
+anchor_bottom = 1.35
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="standlever" type="TextureButton" parent="ui/slotmachinething" unique_id=1511105766]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="slotmachinevalues" type="Polygon2D" parent="ui/slotmachinething" unique_id=784547884]
+
+[node name="TextureRect" type="TextureRect" parent="ui/slotmachinething" unique_id=640709826]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
